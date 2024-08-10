@@ -1,0 +1,620 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*HomePage*/
+
+
+/* Ensure the navbar and image overlay styles are correct as per your design */
+body{
+  padding-top: 60px;
+}
+.navbar {
+  display: fixed;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2f2f2;
+  position: fixed; /* Fix navbar at the top */
+  top: 0; /* Align to the top of the viewport */
+  left: 0; /* Align to the left of the viewport */
+  width: 100%; /* Span the full width of the viewport */
+  z-index: 1000; /* Keeps navbar on top of other content */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8); /* Subtle shadow */
+
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: large;
+  padding: auto;
+  text-align: center;
+  
+}
+
+.quote-btn {
+  background-color: #ffa500;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  
+}
+
+.quote-btn:hover {
+  background-color: darkgoldenrod;
+}
+
+/*Image */
+
+.main-container, .image-container {
+ 
+  width: auto; /* Full width */
+  margin: 1px; /* No margin */
+  padding: 0; /* No padding */
+  overflow: hidden; /* Hide overflow */
+  
+  
+
+}
+.image-overlay {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust the position to be truly centered */
+  text-align: center; /* Center the text inside the overlay */
+  color: #195e3d; /* Text color */
+  width: 100%; /* Full width */
+  
+
+ 
+}
+
+.image-container img {
+ 
+  width: 100%; /* Full width of the container */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Removes bottom space/gap */
+  
+  
+ 
+}
+
+.image-box{
+ 
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.85); /* Semi-transparent black background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8); /* Subtle shadow */
+}
+
+.image-overlay h1 {
+  font-size: 48px; /* Large text */
+  margin: 0 0 20px 0; /* Space between the headline and sub-headline */
+  
+}
+
+.image-overlay h2 {
+  font-size: 24px; /* Smaller than h1 */
+  margin-bottom: 30px; /* Space above the button */
+  color: white;
+  
+}
+
+
+.talk-to-us-btn {
+  font-size: 20px;
+  background-color: #ffa500; /* Orange background color */
+  color: black; /* White text color */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding inside the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 5px; /* Rounded corners */
+  text-transform: uppercase; /* Uppercase text */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8); /* Subtle shadow */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.talk-to-us-btn:hover {
+  background-color: #cc8400; /* Darker shade of orange */
+}
+
+
+
+/* Footer */
+
+
+.footer {
+  background-color: #f8f9fa; /* Light gray background */
+  color: #333; /* Dark text for readability */
+  padding: 20px 0;
+  
+}
+
+.footer h5 {
+  color: #000; /* Black color for headings */
+  margin-bottom: 15px;
+}
+
+.footer ul {
+  list-style: none; /* Removes bullet points */
+  padding: 0;
+}
+
+.footer ul li {
+  line-height: 1.6; /* More readable line spacing */
+}
+
+.footer p {
+  margin-bottom: 0; /* Remove margin for alignment */
+}
+
+
+
+
+
+/* Services Section */
+.services-container {
+  display: inline-block;
+  justify-content: space-between;
+  margin: 20px;
+  gap: 20px;
+}
+
+.service {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc; /* Subtle border for separation */
+}
+
+.special-event-parking {
+  background-color: white;/* Light blue background for differentiation */
+}
+
+.golf-cart-services {
+  background-color: white; /* Light green background for differentiation */
+}
+
+.service img {
+  width: 200px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.service-info {
+  flex: 1;
+}
+
+.service-info h2 {
+  margin-bottom: 10px;
+}
+
+.service-info p {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+/* Logo Bar */
+.logo-bar-container {
+  width: 100%;
+  overflow: hidden; /* Hide anything that goes beyond the container */
+  background-color: white;
+
+}
+
+.logo-bar {
+  display: flex;
+  white-space: nowrap; /* Ensure the images stay in a single line */
+  animation: scrollLogo 20s linear infinite;
+  
+}
+
+.logo-bar img {
+  height: 50px; /* Adjust based on your design */
+  width: auto;
+  margin: 0 20px; /* Space between logos */
+  
+}
+
+@keyframes scrollLogo {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0%); /* Adjust to translate half the total width of logos */
+  }
+}
+
+
+
+
+
+/*ContactPage */
+.contact-page {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.contact-details, .contact-form {
+  flex: 1;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 450px; /* Adjust height as needed */
+}
+
+.social-media a {
+  margin-right: 10px;
+  font-size: 24px; /* Adjust size as needed */
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+}
+
+form label {
+  margin-top: 20px;
+}
+
+button {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkblue;
+}
+
+
+
+/* About Page */
+.team-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.team-member {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.team-member img {
+  width: 250px;
+  height: 350px;
+  border-radius: 75px;
+  margin-right: 20px;
+}
+
+.team-member div {
+  flex: 1;
+}
+
+h2, h3 {
+  color: #333;
+}
+
+p {
+  color: #666;
+}
+
+/* About Page */
+.about-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f1f1f1; /* Light grey background */
+  color: #333; /* Dark grey text */
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  text-align: left;
+}
+
+.about-block, .mission-block, .values-block {
+  flex: 1;
+  margin: 0 10px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #000; /* Black for headlines */
+}
+
+h2 {
+  font-size: 20px;
+  color: #444; /* Darker grey for sub-headlines */
+}
+
+p {
+  font-size: 16px;
+  color: #666; /* Medium grey for paragraph text */
+}
+
+/*quote*/
+.contact-info-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white; /* Light grey background */
+}
+
+.contact-text {
+  flex: 1;
+  padding: 20px;
+}
+
+.contact-details {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.contact-details p {
+  margin-bottom: 10px;
+}
+
+.contact-details i {
+  margin-right: 10px;
+  color: #333; /* Dark icons */
+}
+
+.contact-image img {
+  width: 80%;
+  max-width: 600px; /* Adjust based on your design needs */
+  height: auto;
+}
+
+.contact-textH {
+  font-size: 24px;
+  color: black; /* Dark text for visibility */
+  text-align: center;
+  padding: 10%;
+}
+
+/* Carrer Text Box*/
+
+.careerTextBox{
+margin: 2%;
+
+
+}
+
+/* Valet Page */
+.banner {
+  background-size: 110%; /* Slightly zoomed in */
+  background-position: center; /* Centers the image in the div */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  height: 500px; /* Fixed height */
+  width: 100%; /* Takes full width of the container */
+}
+
+.banner-image {
+  width: 100%; /* Full width of its container */
+  height: 500px; /* Fixed height */
+  object-fit: cover; /* Covers the dimensions, can slightly zoom the image */
+  object-position: center; /* Adjust if you need to focus on a particular part */
+}
+
+
+.banner-text {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.85); /* Semi-transparent black background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8); /* Subtle shadow */
+}
+
+.banner-text h1 {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  color:#195e3d;
+}
+
+.banner-text p {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+/* Optional: Add responsiveness */
+@media (max-width: 768px) {
+  .banner-text h1 {
+    font-size: 1.5em;
+  }
+
+  .banner-text p {
+    font-size: 1em;
+  }
+}
+
+/* Welcome Center */
+.welcome-section {
+  font-family: Arial, sans-serif; /* Use your preferred font */
+  color: black;
+  background-color: white; /* Dark green background */
+  padding: 1%;
+
+}
+
+.header-content h1 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 32px;
+  font-weight: bolder;
+}
+
+.header-content .star-icon {
+  display: block;
+  margin: 10px auto; /* Center the star icon */
+  height: 50px; /* Adjust based on your icon size */
+}
+
+.header-content .header-separator {
+  width: 50%; /* Adjust the width as needed */
+  height: 2px;
+  background-color: gold; /* Gold line for separation */
+  margin: 20px auto; /* Centers the line horizontally */
+  
+}
+
+.header-content p {
+  text-align: center;
+  margin: 20px 15%; /* Adjust the margin for proper alignment */
+  font-size: 18px;
+  line-height: 1.6;
+  padding:1%;
+  color: black;
+}
+
+.services-grid {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 10%;
+  background-color: #195e3d; /* Lighter green */
+}
+
+.service-item h2 {
+  font-size: 30px;
+  color: black;
+  padding:1%;
+  font-weight: bold;
+}
+
+.service-item p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: white;
+  padding: 1%;
+  margin-right: 5%;
+
+  
+}
+
+.service-item h3 {
+  font-size: 26px;
+  color: black;
+  padding:1%;
+  font-style: italic;
+}
+
+.service-item .service-icon {
+  height: 50px;  
+  width: auto;
+  margin-right: 10px; 
+  vertical-align: middle; 
+}
+
+/*Insurance Section */ 
+.insurance-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;  
+  padding: 20px;
+}
+
+.text-section {
+  flex: 1;
+  padding: 20px;
+  color: #333; 
+  margin-left: 10%;
+}
+
+.image-section {
+  flex: 1;
+  padding: 20px;
+}
+
+.image-section img {
+  width: 60%;  
+  height: auto; 
+  border-radius: 4px;  
+  margin-left: 20%;
+}
+
+.header-separatosr {
+  width: 100%; /* Adjust the width as needed */
+  height: 2px;
+  background-color: gold; /* Gold line for separation */
+  margin: 20px auto; /* Centers the line horizontally */
+}
