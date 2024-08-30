@@ -5,8 +5,7 @@ import homeScreen from './Pictures/homeScreen.jpg'
 import React from "react";
 import { useState, useEffect } from "react";
 import { Container, Row, Col, Dropdown } from 'react-bootstrap';
-import specialEventParkingImage from "./specialEventParkingImage.jpg"
-import golfCartServicesImage from "./specialEventParkingImage.jpg"
+
 import logo1 from "./Pictures/logo1.png"
 import logo2 from "./Pictures/logo2.png"
 import logo3 from "./Pictures/logo3.png"
@@ -178,10 +177,13 @@ return (
      <div >
        {Image()}
        <div>
-
+<Container>
        <div style={{marginTop:'0.5%', marginBottom:'0.5%'}}>
+       
         {LogoBar()}
+        
         </div>
+        </Container>
        <div>
    <div style={{ marginBottom:'25px' }}>
        

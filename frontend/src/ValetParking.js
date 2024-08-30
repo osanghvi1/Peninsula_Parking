@@ -4,11 +4,11 @@ import axios from "axios";
 import React from "react";
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import bannerImage from "./Pictures/BannerImage7.png"
+import bannerImage from "./Pictures/bannerImage3.jpg"
 import People from './Pictures/people.png';
 import Gears from './Pictures/Gear-People.png'
 import ValetIcon from './Pictures/bvalet.png'; 
-import BuisnessImage from './Pictures/buisness-image.jpg'; 
+import BuisnessImage from './Pictures/Stock1.jpg'; 
 import { useState, useEffect } from "react";
 
 
@@ -17,7 +17,7 @@ export function VParking() {
     const Banner = () => {
         return (
           <div className="banner">
-            <img src={bannerImage} alt="Valet Parking Services" className="banner-image" />
+            <img src={bannerImage} alt="Valet Parking Services" className="banner-image3" />
             <div className="banner-text">
               <h1>VALET PARKING</h1>
             </div>

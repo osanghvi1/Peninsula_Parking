@@ -4,11 +4,11 @@ import axios from "axios";
 import React from "react";
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import bannerImage from "./Pictures/BannerImage7.png"
+import bannerImage from "./Pictures/Stock3.jpg"
 import People from './Pictures/people.png';
 import Gears from './Pictures/Gear-People.png'
 import ValetIcon from './Pictures/bvalet.png'; 
-import BuisnessImage from './Pictures/buisness-image.jpg'; 
+import BuisnessImage from './Pictures/Stock5.jpg'; 
 import { useState, useEffect } from "react";
 
 

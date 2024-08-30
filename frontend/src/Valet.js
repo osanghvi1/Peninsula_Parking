@@ -9,8 +9,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import specialEventParkingImage from "./specialEventParkingImage.jpg"
-import golfCartServicesImage from "./specialEventParkingImage.jpg"
 import bannerImage from "./Pictures/bannerImage2.jpg"
 import starIcon from "./Pictures/headerDiv.png"
 import ValetIcon from './Pictures/valet-icon.png'; 
@@ -42,7 +40,9 @@ export function ValetParking() {
                 <div className="header-separator"></div>
                 <p style={{color: 'black'}}>At Peninsula Parking, we are dedicated to providing a comprehensive valet service that is tailored to meet the needs of any business or event. Our experienced team of valets has you covered for all of your parking needs, ensuring that your guests can enjoy their visit without worrying about where to park.</p>
               </div>
+             
               <div className="services-grid">
+                
                 <div className="service-item">
                 <img src={ValetIcon} alt="Valet Service Icon" className="service-icon" />
                   <h3>Our</h3>
@@ -167,18 +167,25 @@ export function ValetParking() {
     <div>
       
      {NavbarComponent()}
+  
      <div >
+    
      {Banner()}
+     
      <div>
      {WelcomeSection()}
      </div>
      <div>
     {InsuranceSection()}
      </div>
+     
        <div>
+        
        {Footer()}
          </div>
+   
          </div>
+      
          </div>
 
    

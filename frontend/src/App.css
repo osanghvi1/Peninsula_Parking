@@ -7,11 +7,19 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 768px) {
+  .services-container,
+  .contact-page {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center;
   }
 }
+.service,
+  .contact-details,
+  .contact-form {
+    width: 100%; /* Take full width on small screens */
+    margin-bottom: 20px; /* Add some space between stacked items */
+  }
 
 .App-header {
   background-color: #282c34;
@@ -37,6 +45,10 @@
   }
 }
 
+body, .main-container {
+  overflow-x: hidden;
+}
+
 /*HomePage*/
 
 
@@ -47,7 +59,8 @@ body{
 .navbar {
   display: fixed;
   justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   background-color: #f2f2f2;
   position: fixed; /* Fix navbar at the top */
   top: 0; /* Align to the top of the viewport */
@@ -75,6 +88,7 @@ body{
   text-align: center;
   
 }
+
 
 .quote-btn {
   background-color: #ffa500;
@@ -467,10 +481,13 @@ margin: 2%;
 
 .banner-image {
   width: 100%; /* Full width of its container */
-  height: 500px; /* Fixed height */
+  height: 100%; /* Fixed height */
   object-fit: cover; /* Covers the dimensions, can slightly zoom the image */
-  object-position: center; /* Adjust if you need to focus on a particular part */
+  object-position: 50% 40%; /* Adjust if you need to focus on a particular part */
 }
+
+
+
 
 
 .banner-text {
@@ -495,6 +512,16 @@ margin: 2%;
   font-size: 1.2em;
   text-align: center;
 }
+
+
+/* Banner Image for Event Valet Parking Page */
+.banner-image3 {
+  width: 100%; /* Full width of its container */
+  height: 100%; /* Fixed height */
+  object-fit: cover; /* Covers the dimensions, can slightly zoom the image */
+  object-position: 50% 65%; /* Adjust if you need to focus on a particular part */
+}
+
 
 /* Optional: Add responsiveness */
 @media (max-width: 768px) {
