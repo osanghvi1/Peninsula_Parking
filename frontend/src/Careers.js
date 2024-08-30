@@ -77,7 +77,7 @@ const Careers = () => {
           {/* Other links */}
           <li><a href="/commercial-services">Commercial Services</a></li>
           <li><a href="/careers">Careers</a></li>
-          <li><a href="/about">About</a></li>
+       
           <li><a href="/ContactPage">Contact</a></li>
         </ul>
         <button className="quote-btn" a href="/quote" style={{ padding: '10px', color: 'black', fontSize: '20px'}} >
