@@ -97,7 +97,7 @@ export function Commercial() {
                   <h5>Company</h5>
                   <ul>
                     <li><a href='/careers' style={{ textDecoration: 'none', color: 'inherit' }}>Employment</a></li>
-                    <li><a href='/About' style={{ textDecoration: 'none', color: 'inherit' }}>About Us</a></li>
+                  
                     <li><a href= '/ContactPage' style={{ textDecoration: 'none', color: 'inherit' }}>Contact Us</a></li>
 
                   </ul>

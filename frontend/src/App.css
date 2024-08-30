@@ -104,6 +104,7 @@ body{
   background-color: darkgoldenrod;
 }
 
+
 /*Image */
 
 .main-container, .image-container {
@@ -186,12 +187,11 @@ body{
 
 /* Footer */
 
-
 .footer {
   background-color: #f8f9fa; /* Light gray background */
   color: #333; /* Dark text for readability */
+  text-align: center; /* Center text for mobile view */
   padding: 20px 0;
-  
 }
 
 .footer h5 {
@@ -212,6 +212,11 @@ body{
   margin-bottom: 0; /* Remove margin for alignment */
 }
 
+@media (min-width: 768px) {
+  .footer {
+    text-align: left; /* Align text to the left on larger screens */
+  }
+}
 
 
 
@@ -573,9 +578,10 @@ margin: 2%;
   color: black;
 }
 
+/*Welcome Section */
 .services-grid {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around; /* This will spread items evenly on larger screens */
   padding: 20px 10%;
   background-color: #195e3d; /* Lighter green */
 }
@@ -583,7 +589,7 @@ margin: 2%;
 .service-item h2 {
   font-size: 30px;
   color: black;
-  padding:1%;
+  padding: 1%;
   font-weight: bold;
 }
 
@@ -593,22 +599,41 @@ margin: 2%;
   color: white;
   padding: 1%;
   margin-right: 5%;
-
-  
 }
 
 .service-item h3 {
   font-size: 26px;
   color: black;
-  padding:1%;
+  padding: 1%;
   font-style: italic;
 }
 
 .service-item .service-icon {
-  height: 50px;  
+  height: 50px;
   width: auto;
-  margin-right: 10px; 
-  vertical-align: middle; 
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Mobile specific styles */
+@media (max-width: 768px) {
+  .services-grid {
+    justify-content: center; /* Center items horizontally */
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .service-item {
+    text-align: center; /* Center text for each service item */
+  }
+
+  .service-item .service-icon {
+    margin: 0 auto; /* Center the icon horizontally */
+    display: block; /* Necessary to allow auto margins to work */
+  }
+
+  .service-item p {
+    margin-right: 0; /* Remove right margin on mobile for full alignment */
+  }
 }
 
 /*Insurance Section */ 
@@ -616,14 +641,14 @@ margin: 2%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: white;  
+  background-color: white;
   padding: 20px;
 }
 
 .text-section {
   flex: 1;
   padding: 20px;
-  color: #333; 
+  color: #333;
   margin-left: 10%;
 }
 
@@ -633,15 +658,24 @@ margin: 2%;
 }
 
 .image-section img {
-  width: 60%;  
-  height: auto; 
-  border-radius: 4px;  
+  width: 60%;
+  height: auto;
+  border-radius: 4px;
   margin-left: 20%;
 }
 
-.header-separatosr {
-  width: 100%; /* Adjust the width as needed */
-  height: 2px;
-  background-color: gold; /* Gold line for separation */
-  margin: 20px auto; /* Centers the line horizontally */
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .insurance-section {
+    flex-direction: column;
+    text-align: center; /* Center text when the image is removed */
+  }
+  
+  .text-section {
+    margin-left: 0; /* Remove margin for mobile */
+  }
+
+  .image-section {
+    display: none; /* Hide image on mobile */
+  }
 }

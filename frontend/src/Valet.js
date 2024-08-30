@@ -51,9 +51,9 @@ export function ValetParking() {
                 </div>
                 <div className="service-item" style={{marginRight:'5%'}}>
                 <img src={SecurityIcon} alt="Security Icon" className="service-icon" />
-                  <h3>Safety</h3>
+                  <h3>Our</h3>
                   <h2>SECURITY</h2>
-                  <p>At Peninsula Parking, safety and security are our top priorities. We employ a highly trained staff that is committed to providing the highest levels of security and safety for your guests. Our team is experienced in handling a wide range of security situations.</p>
+                  <p>At Peninsula Parking, security are our top priorities. We employ a highly trained staff that is committed to providing the highest levels of security for your guests. Our team is experienced in handling a wide range of security situations.</p>
                 </div>
               </div>
             </div>
@@ -64,8 +64,9 @@ export function ValetParking() {
             return (
               <div className="insurance-section">
                 <div className="text-section">
-                  <h2>INSURANCE</h2>
-                  <p>We also understand the importance of having proper insurance coverage for your valet parking needs. Our team is fully insured to provide the highest levels of protection for your guests and their vehicles.</p>
+                  <h2>SAFTEY</h2>
+                  <p>We prioritize the safety of your guests and their vehicles above all. Our team is extensively trained and follows rigorous safety protocols to ensure a secure environment. Each member is equipped to handle and prevent any safety concerns, providing peace of mind throughout your event.</p>
+        <h4>Let us handle the transportation logistics, so your guests can focus on enjoying the event to the fullest.</h4>
                 </div>
                 <div className="image-section">
                   <img src={CarImage} alt="Car" />
@@ -101,7 +102,7 @@ export function ValetParking() {
               <h5>Company</h5>
               <ul>
                 <li><a href='/careers' style={{ textDecoration: 'none', color: 'inherit' }}>Employment</a></li>
-                <li><a href='/About' style={{ textDecoration: 'none', color: 'inherit' }}>About Us</a></li>
+              
                 <li><a href= '/ContactPage' style={{ textDecoration: 'none', color: 'inherit' }}>Contact Us</a></li>
 
               </ul>
