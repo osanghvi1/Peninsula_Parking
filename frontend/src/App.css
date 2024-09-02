@@ -266,14 +266,14 @@ body{
 
 button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color:#195e3d;
   color: white;
   border: none;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #195e3d;
 }
 
 
@@ -709,3 +709,13 @@ margin: 2%;
   text-decoration: none;
   font-size: 18px;
 }
+
+
+.menu-toggle{
+  background-color:#195e3d;
+}
+
+.menu-toggle:hover{
+  background-color:#195e3d;
+}
+
