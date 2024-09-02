@@ -81,7 +81,7 @@ export function HomePage2() {
                   <p>Our Esteemed Clients represent a diverse array of industries, each benefiting from our commitment to excellence and tailored solutions. We take pride in the lasting partnerships we’ve cultivated, delivering exceptional service and value to every organization we collaborate with. These relationships are a testament to our dedication, expertise, and the trust our clients place in us.</p>
         <h4>Let us handle the transportation logistics, so your guests can focus on enjoying the event to the fullest.</h4>
                 </div>
-                <div className="image-section">
+                <div className="image-section2">
                   <img src={Logos} alt="Logo" />
                 </div>
               </div>

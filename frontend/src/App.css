@@ -684,6 +684,17 @@ margin: 2%;
   border-radius: 4px;
   margin-left: 20%;
 }
+.image-section2 {
+  flex: 1;
+  padding: 20px;
+}
+
+.image-section2 img {
+  width: 60%;
+  height: auto;
+  border-radius: 4px;
+  margin-left: 20%;
+}
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
@@ -697,6 +708,9 @@ margin: 2%;
   }
 
   .image-section {
+    display: none; /* Hide image on mobile */
+  }
+  .image-section2 {
     display: none; /* Hide image on mobile */
   }
 }
