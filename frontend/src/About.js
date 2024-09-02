@@ -116,10 +116,17 @@ const Image = () => {
 
 
     const MobileNavbar = () => {
-      const [isOpen, setIsOpen] = useState(false);
+      const [isMenuOpen, setIsMenuOpen] = useState(false);
+      const [isServicesOpen, setIsServicesOpen] = useState(false);
   
       const toggleMenu = () => {
-          setIsOpen(!isOpen);
+          setIsMenuOpen(!isMenuOpen);
+          if (isServicesOpen) setIsServicesOpen(false); // Close services dropdown when toggling the menu
+      };
+  
+      const handleServicesClick = () => {
+          // Toggle services view when "Services" is clicked
+          setIsServicesOpen(!isServicesOpen);
       };
   
       return (
@@ -131,20 +138,28 @@ const Image = () => {
                       </a>
                   </div>
                   <button onClick={toggleMenu} className="menu-toggle">☰</button>
-                  {isOpen && (
-                      <ul className="nav-links" style={{ position: 'absolute', top: '60px', left: 0, width: '100%', backgroundColor: '#f2f2f2', display: 'flex', flexDirection: 'column', padding: '10px 0' }}>
-                          <li><a href="/Services">Services</a></li>
-                          <li><a href="/commercial-services">Commercial Services</a></li>
-                          <li><a href="/careers">Careers</a></li>
-                          <li><a href="/ContactPage">Contact</a></li>
+                  {isMenuOpen && (
+                      <ul className="nav-links" style={{ position: 'absolute', top: '45px', left: 0, width: '100%', backgroundColor: '#f2f2f2', display: 'flex', flexDirection: 'column', padding: '10px 0' }}>
+                          <li onClick={handleServicesClick} className='mNavBar'>Services </li>
+                          {isServicesOpen && (
+                              <div style={{ display: 'flex', flexDirection: 'column', paddingLeft: '20px' }}>
+                                  <a href="/Valet" className='mNavBar' style={{ padding: '10px 0'  }}>Valet Parking</a>
+                                  <a href="/Traffic" className='mNavBar' style={{ padding: '10px 0' }}>Traffic Control</a>
+                                  <a href="/Golf" className='mNavBar' style={{ padding: '10px 0' }}>Golf Cart Service</a>
+                              </div>
+                          )}
+                          <li className='mNavBar'><a href="/commercial-services">Commercial Services</a></li>
+                          <li className='mNavBar'><a href="/careers">Careers</a></li>
+                          <li className='mNavBar'><a href="/ContactPage">Contact</a></li>
+                          <button className="quote-btn" a href="/quote" style={{ padding: '10px', color: 'black', fontSize: '20px'}} >
+            <a href="/quote" style={{ color: 'black', textDecoration: 'none' }}>Request a Quote</a>
+          </button>
                       </ul>
                   )}
               </Container>
           </nav>
       );
   };
-  
-  
   
     const Footer = () => {
       return (

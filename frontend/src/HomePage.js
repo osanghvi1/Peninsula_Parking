@@ -193,7 +193,7 @@ const LogoBar = () => {
                     </div>
                     <button onClick={toggleMenu} className="menu-toggle">☰</button>
                     {isOpen && (
-                        <ul className="nav-links" style={{ position: 'absolute', top: '60px', left: 0, width: '100%', backgroundColor: '#f2f2f2', display: 'flex', flexDirection: 'column', padding: '10px 0' }}>
+                        <ul className="nav-links" style={{ position: 'absolute', top: '45px', left: 0, width: '100%', backgroundColor: '#f2f2f2', display: 'flex', flexDirection: 'column', padding: '10px 0' }}>
                             <li><a href="/Services">Services</a></li>
                             <li><a href="/commercial-services">Commercial Services</a></li>
                             <li><a href="/careers">Careers</a></li>
