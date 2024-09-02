@@ -20,7 +20,23 @@ import CarImage from './Pictures/car-image.jpg';
 
 
 export function ValetParking() {
-  
+ 
+ 
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+
+
+
+
     const Banner = () => {
         return (
           <div className="banner">
@@ -127,6 +143,7 @@ export function ValetParking() {
       
         const toggleDropdown = () => setIsOpen(!isOpen);
 
+      
         return (
           
           <nav className="navbar" style={{position: 'fixed'}}>
@@ -152,8 +169,7 @@ export function ValetParking() {
               {/* Other links */}
               <li><a href="/commercial-services">Commercial Services</a></li>
               <li><a href="/careers">Careers</a></li>
-           
-              <li><a href="/ContactPage">Contact</a></li>
+             <li><a href="/ContactPage">Contact</a></li>
             </ul>
             <button className="quote-btn" a href="/quote" style={{ padding: '10px', color: 'black', fontSize: '20px'}} >
               <a href="/quote" style={{ color: 'black', textDecoration: 'none' }}>Request a Quote</a>
@@ -162,12 +178,64 @@ export function ValetParking() {
         </nav>
         );
       };
+
+
+      const MobileNavbar = () => {
+        const [isMenuOpen, setIsMenuOpen] = useState(false);
+        const [isServicesOpen, setIsServicesOpen] = useState(false);
+    
+        const toggleMenu = () => {
+            setIsMenuOpen(!isMenuOpen);
+            if (isServicesOpen) setIsServicesOpen(false); // Close services dropdown when toggling the menu
+        };
+    
+        const handleServicesClick = () => {
+            // Toggle services view when "Services" is clicked
+            setIsServicesOpen(!isServicesOpen);
+        };
+    
+        return (
+            <nav className="mobile-navbar" style={{ position: 'fixed', top: 0, left: 0, width: '100%', backgroundColor: '#f2f2f2', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', zIndex: 1000 }}>
+                <Container className="d-flex justify-content-between align-items-center" style={{ height: '60px' }}>
+                    <div className="logo">
+                        <a href="/">
+                            <img src={logo} alt="Logo" style={{ width: '200px', height: '100%' }} />
+                        </a>
+                    </div>
+                    <button onClick={toggleMenu} className="menu-toggle">☰</button>
+                    {isMenuOpen && (
+                        <ul className="nav-links" style={{ position: 'absolute', top: '60px', left: 0, width: '100%', backgroundColor: '#f2f2f2', display: 'flex', flexDirection: 'column', padding: '10px 0' }}>
+                            <li onClick={handleServicesClick} className='mNavBar'>Services </li>
+                            {isServicesOpen && (
+                                <div style={{ display: 'flex', flexDirection: 'column', paddingLeft: '20px' }}>
+                                    <a href="/Valet" className='mNavBar' style={{ padding: '10px 0'  }}>Valet Parking</a>
+                                    <a href="/Traffic" className='mNavBar' style={{ padding: '10px 0' }}>Traffic Control</a>
+                                    <a href="/Golf" className='mNavBar' style={{ padding: '10px 0' }}>Golf Cart Service</a>
+                                </div>
+                            )}
+                            <li className='mNavBar'><a href="/commercial-services">Commercial Services</a></li>
+                            <li className='mNavBar'><a href="/careers">Careers</a></li>
+                            <li className='mNavBar'><a href="/ContactPage">Contact</a></li>
+                            <button className="quote-btn" a href="/quote" style={{ padding: '10px', color: 'black', fontSize: '20px'}} >
+              <a href="/quote" style={{ color: 'black', textDecoration: 'none' }}>Request a Quote</a>
+            </button>
+                        </ul>
+                    )}
+                </Container>
+            </nav>
+        );
+    };
+    
     
       return (
+
+
+        
   
     <div>
       
-     {NavbarComponent()}
+      {isMobile ?   MobileNavbar() : NavbarComponent()}
+
   
      <div >
     

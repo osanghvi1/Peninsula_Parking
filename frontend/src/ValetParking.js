@@ -13,7 +13,17 @@ import { useState, useEffect } from "react";
 
 
 export function VParking() {
-  
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+      const handleResize = () => {
+          setIsMobile(window.innerWidth < 768);
+      };
+
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
     const Banner = () => {
         return (
           <div className="banner">
@@ -160,11 +170,40 @@ export function VParking() {
         );
       };
     
+      const MobileNavbar = () => {
+        const [isOpen, setIsOpen] = useState(false);
+    
+        const toggleMenu = () => {
+            setIsOpen(!isOpen);
+        };
+    
+        return (
+            <nav className="mobile-navbar" style={{ position: 'fixed', top: 0, left: 0, width: '100%', backgroundColor: '#f2f2f2', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', zIndex: 1000 }}>
+                <Container className="d-flex justify-content-between align-items-center" style={{ height: '60px' }}>
+                    <div className="logo">
+                        <a href="/">
+                            <img src={logo} alt="Logo" style={{ width: '200px', height: '100%' }} />
+                        </a>
+                    </div>
+                    <button onClick={toggleMenu} className="menu-toggle">☰</button>
+                    {isOpen && (
+                        <ul className="nav-links" style={{ position: 'absolute', top: '60px', left: 0, width: '100%', backgroundColor: '#f2f2f2', display: 'flex', flexDirection: 'column', padding: '10px 0' }}>
+                            <li><a href="/Services">Services</a></li>
+                            <li><a href="/commercial-services">Commercial Services</a></li>
+                            <li><a href="/careers">Careers</a></li>
+                            <li><a href="/ContactPage">Contact</a></li>
+                        </ul>
+                    )}
+                </Container>
+            </nav>
+        );
+    };
+    
       return (
   
     <div>
       
-     {NavbarComponent()}
+       {isMobile ?   MobileNavbar() : NavbarComponent()}
      <div >
      {Banner()}
      <div>

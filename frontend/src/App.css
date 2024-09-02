@@ -105,6 +105,7 @@ body{
 }
 
 
+
 /*Image */
 
 .main-container, .image-container {
@@ -281,21 +282,18 @@ button:hover {
   width: 100%;
   overflow: hidden; /* Hide anything that goes beyond the container */
   background-color: white;
-
 }
 
 .logo-bar {
   display: flex;
   white-space: nowrap; /* Ensure the images stay in a single line */
-  animation: scrollLogo 20s linear infinite;
-  
+  animation: scrollLogo 2000s linear infinite; /* Adjust timing here */
 }
 
 .logo-bar img {
   height: 50px; /* Adjust based on your design */
   width: auto;
   margin: 0 20px; /* Space between logos */
-  
 }
 
 @keyframes scrollLogo {
@@ -303,7 +301,7 @@ button:hover {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(0%); /* Adjust to translate half the total width of logos */
+    transform: translateX(-50%); /* Adjust this value based on the number of logos and their widths */
   }
 }
 
@@ -467,6 +465,13 @@ p {
   padding: 10%;
 }
 
+/* Hide the image in mobile mode */
+@media (max-width: 768px) {
+  .contact-image {
+    display: none;
+  }
+}
+
 /* Carrer Text Box*/
 
 .careerTextBox{
@@ -525,6 +530,13 @@ margin: 2%;
   height: 100%; /* Fixed height */
   object-fit: cover; /* Covers the dimensions, can slightly zoom the image */
   object-position: 50% 65%; /* Adjust if you need to focus on a particular part */
+}
+
+.banner-image2 {
+  width: 100%; /* Full width of its container */
+  height: 100%; /* Fixed height */
+  object-fit: cover; /* Covers the dimensions, can slightly zoom the image */
+  object-position: 50% 51.8%; /* Adjust if you need to focus on a particular part */
 }
 
 
@@ -615,6 +627,15 @@ margin: 2%;
   vertical-align: middle;
 }
 
+
+.service-item .service-icon2 {
+  height: 200px;
+  width: auto;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+
 /* Mobile specific styles */
 @media (max-width: 768px) {
   .services-grid {
@@ -678,4 +699,13 @@ margin: 2%;
   .image-section {
     display: none; /* Hide image on mobile */
   }
+}
+
+.mNavBar {
+  color: black;
+ padding-left: 1%;
+  font-weight: bold;
+  list-style: none;
+  text-decoration: none;
+  font-size: 18px;
 }

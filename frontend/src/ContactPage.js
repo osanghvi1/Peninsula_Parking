@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import logo from './Pictures/plogo.png';
 import { Button, Form, Container, Row, Col } from 'react-bootstrap';
@@ -6,6 +6,19 @@ import axios from "axios";
 
 
 const ContactPage = () => {
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+
   // Define state for form data
   const [formData, setFormData] = useState({
     firstName: "",
@@ -51,6 +64,7 @@ const ContactPage = () => {
   
     const toggleDropdown = () => setIsOpen(!isOpen);
 
+  
     return (
       
       <nav className="navbar" style={{position: 'fixed'}}>
@@ -76,8 +90,7 @@ const ContactPage = () => {
           {/* Other links */}
           <li><a href="/commercial-services">Commercial Services</a></li>
           <li><a href="/careers">Careers</a></li>
-       
-          <li><a href="/ContactPage">Contact</a></li>
+         <li><a href="/ContactPage">Contact</a></li>
         </ul>
         <button className="quote-btn" a href="/quote" style={{ padding: '10px', color: 'black', fontSize: '20px'}} >
           <a href="/quote" style={{ color: 'black', textDecoration: 'none' }}>Request a Quote</a>
@@ -87,6 +100,35 @@ const ContactPage = () => {
     );
   };
 
+
+  const MobileNavbar = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
+    return (
+        <nav className="mobile-navbar" style={{ position: 'fixed', top: 0, left: 0, width: '100%', backgroundColor: '#f2f2f2', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', zIndex: 1000 }}>
+            <Container className="d-flex justify-content-between align-items-center" style={{ height: '60px' }}>
+                <div className="logo">
+                    <a href="/">
+                        <img src={logo} alt="Logo" style={{ width: '200px', height: '100%' }} />
+                    </a>
+                </div>
+                <button onClick={toggleMenu} className="menu-toggle">☰</button>
+                {isOpen && (
+                    <ul className="nav-links" style={{ position: 'absolute', top: '60px', left: 0, width: '100%', backgroundColor: '#f2f2f2', display: 'flex', flexDirection: 'column', padding: '10px 0' }}>
+                        <li><a href="/Services">Services</a></li>
+                        <li><a href="/commercial-services">Commercial Services</a></li>
+                        <li><a href="/careers">Careers</a></li>
+                        <li><a href="/ContactPage">Contact</a></li>
+                    </ul>
+                )}
+            </Container>
+        </nav>
+    );
+};
   const Footer = () => {
     return (
       <footer className="footer">
@@ -135,7 +177,7 @@ const ContactPage = () => {
   return (
 <div>
     <div>
-     {NavbarComponent()}
+       {isMobile ?   MobileNavbar() : NavbarComponent()}
     
       <Container style={{marginTop: '2%'}}>
         <Row>

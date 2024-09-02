@@ -13,6 +13,7 @@ import Commercial from './commercial';
 import VParking from './ValetParking';
 import TrafficControl from './TrafficControl';
 import GolfCartServices from './GolfCartServices';
+import HomePage2 from './HomePage2';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -25,7 +26,7 @@ root.render(
    
     <Route
     path ="/" 
-    element={<HomePage/>}
+    element={<HomePage2/>}
     />
 
 <Route
@@ -69,9 +70,12 @@ root.render(
     path ="/Services"
     element={<ValetParking/>}
     />
-   </Routes>
+
    
 
+
+
+   </Routes>
    
    </BrowserRouter>
    
