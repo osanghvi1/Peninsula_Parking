@@ -4,10 +4,10 @@
 const mysql = require("mysql2/promise");
 
 const db = mysql.createPool({
-  host: "127.0.0.1",
-  user: "root",
-  password: "Pangra1587",
-  database: "PENN",
+  host: "db5016294665.hosting-data.io",
+  user: "dbu3611753",
+  password: "PennParking1",
+  database: "dbs13257134",
 });
 
 module.exports = db;
