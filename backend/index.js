@@ -6,7 +6,7 @@ const express = require("express");
 const db = require("./db.js");
 const cors = require("cors");
 const app = express();
-const PORT = 4000;
+const PORT = 3306;
 
 
 app.use(cors());
