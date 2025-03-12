@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2a09309e.css",
+    "main.js": "/static/js/main.d85a74e8.js",
+    "static/js/453.5004175a.chunk.js": "/static/js/453.5004175a.chunk.js",
+    "static/media/BannerImage7.png": "/static/media/BannerImage7.afdec78509b7a84ad5b6.png",
+    "static/media/bannerImage2.jpg": "/static/media/bannerImage2.7c9a6a119f9b97ca04d8.jpg",
+    "static/media/Stock5.jpg": "/static/media/Stock5.edafdea63afc79e5bb3f.jpg",
+    "static/media/bannerImage3.jpg": "/static/media/bannerImage3.05053803c6772671c065.jpg",
+    "static/media/Stock3.jpg": "/static/media/Stock3.3be0f52dc359dedf6f20.jpg",
+    "static/media/Stock2.jpg": "/static/media/Stock2.bdfcaf3ec465c00fff2b.jpg",
+    "static/media/logo3.png": "/static/media/logo3.fca8e9acb69f889b6841.png",
+    "static/media/stock4.jpg": "/static/media/stock4.7fa5663be47cc3c37b6f.jpg",
+    "static/media/homeScreen.jpg": "/static/media/homeScreen.bf5b3dc4477ff6784913.jpg",
+    "static/media/Certification1.svg": "/static/media/Certification1.deac32f5d4854d02d333eda440643de0.svg",
+    "static/media/buisness-image.jpg": "/static/media/buisness-image.272abb6ba532fdac8398.jpg",
+    "static/media/Stock1.jpg": "/static/media/Stock1.1dbf41bbc8a9164dab2c.jpg",
+    "static/media/car-image.jpg": "/static/media/car-image.981c61b989007d2069a4.jpg",
+    "static/media/contactImage.jpg": "/static/media/contactImage.a925cbac7c4b4b9fd6f4.jpg",
+    "static/media/CEO.jpg": "/static/media/CEO.f51a223d735d143541e0.jpg",
+    "static/media/security-icon.png": "/static/media/security-icon.4ff133ea6691029f8019.png",
+    "static/media/final_adjusted_logos.png": "/static/media/final_adjusted_logos.f5ae6a0236569f88aa08.png",
+    "static/media/logo1.png": "/static/media/logo1.61d9c10669fb56cdc4b3.png",
+    "static/media/Certification2.png": "/static/media/Certification2.ffc48e5447ecf0d40b44.png",
+    "static/media/logo4.png": "/static/media/logo4.4a75b5198ebce79200b1.png",
+    "static/media/headerDiv.png": "/static/media/headerDiv.0c8bd853474fbc03da14.png",
+    "static/media/logo8.png": "/static/media/logo8.031e3a4793f0cc43c25b.png",
+    "static/media/logo2.png": "/static/media/logo2.184dcaf90d7edd062c58.png",
+    "static/media/Gear-People.png": "/static/media/Gear-People.c469a9fdff0b538212d8.png",
+    "static/media/valet-icon.png": "/static/media/valet-icon.3bf0b0f31d7aa5af9773.png",
+    "static/media/logo9.png": "/static/media/logo9.a1a936320995fe31d2ee.png",
+    "static/media/logo5.png": "/static/media/logo5.adef76fa672c8dbd0f40.png",
+    "static/media/people.png": "/static/media/people.e2bcdd811825c26d3fdd.png",
+    "index.html": "/index.html",
+    "main.2a09309e.css.map": "/static/css/main.2a09309e.css.map",
+    "main.d85a74e8.js.map": "/static/js/main.d85a74e8.js.map",
+    "453.5004175a.chunk.js.map": "/static/js/453.5004175a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2a09309e.css",
+    "static/js/main.d85a74e8.js"
+  ]
+}
